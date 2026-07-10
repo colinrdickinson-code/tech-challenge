@@ -16,7 +16,7 @@ https://open.toronto.ca/dataset/ttc-bus-delay-data/
 
 #### Data Transformation
 
-  Transform the raw CSV data into a structured format (e.g., Excel, SQL, etc.) suitable for efficient querying and analysis.
+  Transform the raw CSV data into a structured format suitable for efficient querying and analysis.
   Data Analysis:
   Calculate the average number of stops per route.
   Identify the route with the most frequent schedule updates.
