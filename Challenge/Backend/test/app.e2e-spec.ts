@@ -42,7 +42,7 @@ describe('Backend API (e2e)', () => {
     .expect(401);
   });
 
-  it('/albums (GET) should return the autheticated user\'s albums', async () => {
+  it('/albums (GET) should return the authenticated user\'s albums', async () => {
     const loginRespone = await request(app.getHttpServer())
     .post('/auth/login')
     .send({
