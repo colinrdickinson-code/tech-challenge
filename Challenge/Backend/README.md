@@ -1,35 +1,47 @@
-#Back-end Developer Coding Challenge
+# Backend Developer Coding Challenge
 
-## Goal:
+## Description
 
-In this challenge, you will have to setup a backend REST API that allows a user to fetch a list of all users and albums, authenticates a user and fetches their specific photos and albums.
+Rest API built with NestJS that provides autheticated access to users, albums and photos using JSONPlaceholder data.
 
-that has the following endpoints:
+## Installation
 
-- /users to fetch all users (unauthenticated)
-- /albums to fetch all albums associated with the user (authenticated)
-- /photos to fetch all photos associated with the user (authenticated)
-- /albums/:id to return a specific album (authenticated)
-- /photos/:id to return a specific photo (authenticated)
+npm install
 
-Use data from https://jsonplaceholder.typicode.com/ to setup a JSON file that will act as your "database".
+## Running the application
 
-Suggested Frameworks:
+npm run start:dev
 
-- [NestJS](https://nestjs.com/)
+The API runs on http://localhost:3000
 
-#### Develop a Back-end app that allows a user to see their albums and its' associated photographs
+## Authentication
 
-- [ ] Fork this repo. Keep it public until we have been able to review it.
-- [ ] Use any language/framework you are comfortable with.
-- [ ] User/Albums/Photos structure similar to https://jsonplaceholder.typicode.com/
-- [ ] App should restrict some routes and not others
-- [ ] Integration and Unit test a single function or route.
-- [ ] Setup appropriate interfaces
+POST /auth/login
 
-### Evaluation:
+Example:
 
-- [ ] App operates and fulfills above criteria
-- [ ] No crashes or bugs
-- [ ] Follow Clean Code and SOLID principles
-- [ ] Code is understandable and maintainable
+{
+  "username": "Bret"
+  "password": "password"
+}
+
+The response contains a JWT access token.
+
+Authenticated endpoints require:
+
+Authorization: Bearer <token>
+
+## Endpoints
+
+GET /users
+GET /albums
+GET /albums/:id
+GET /photos
+GET /photos/:id
+
+## Testing
+
+npm test
+npm run test:e2e
+
+Since the JSONPlaceholder does not provide password data, all valid user authenticate using the demo password "password".
