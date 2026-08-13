@@ -2,7 +2,7 @@
 
 ## Description
 
-Rest API built with NestJS that provides autheticated access to users, albums and photos using JSONPlaceholder data.
+Rest API built with NestJS that provides authenticated access to users, albums and photos using JSONPlaceholder data.
 
 ## Installation
 
@@ -21,7 +21,7 @@ POST /auth/login
 Example:
 
 {
-  "username": "Bret"
+  "username": "Bret",
   "password": "password"
 }
 
